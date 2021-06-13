@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+            width: 100%;
+            background-color:black ;
+            flex-wrap: nowrap;
+            display: flex;
+            justify-content: center;
+        }
+        #first>div{
+            line-height: 50px;
+            flex-grow: 1;
+            color: blanchedalmond;
+        }
+        @keyframes rotate{
+    0%{
+        transform: rotate(0);
+      }
+    50%{
+    	transform:rotate(200deg);
+    }
+    100%{
+         transform: rotate(360deg);
+    	}
+	}
+
+        #music_img>img{
+            border-radius: 50%;
+            animation: rotate 10s linear infinite; 
+        }
+        .middle{
+            margin: auto;
+        }
+        #lyric{
+            width: 510px;
+         
+            margin: auto;
+        }
+        .main{
+           position: absolute;
+           left:60%;
+           top:120px;;
+        }
+        #m_btn{
+            background-image: url(./images/4.jpg) ;
+            background-position:  -162px -88px;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+        }
+       #prograssBar{
+           float: left;
+           background-color: rgb(126, 126, 126);
+           position: absolute;
+           top: 210px;
+           left:25%;
+           width: 120px;
+           height: 2px;
+       }
+      
+       #time{
+        position: absolute;
+           top: 210px;
+           left:93%;
+           
+           width: 10px;
+           height: 10px;          
+       }
+       #prograsstime{
+        background-color:rgb(245, 218, 69);
+        width: 10px;
+        height: 3px;
+        float: left;
+       }
+       #sound{
+           background-image: url(./images/4.jpg);
+           background-position: -69px 0px;
+           width: 25px;
+           height: 25px;
+           position: absolute;
+           top: 210px;
+           left: 110%;
+       }
+       #updown{
+           background-image: url(./images/4.jpg);
+           background-position: 2px -48px;
+           width: 200px;
+           height: 40px;
+           position: absolute;
+           top: 400px;
+           left: 60%;
+           text-align: center;
+            float: left;
+       }
+       #updown2{
+           background-image: url(./images/4.jpg);
+           background-position: 0px 0px;
+           width: 18px;
+           height: 18px;
+           text-align: center;
+           position: absolute;
+           left:10%;
+           top: 30%;
+       }
+       #last{
+           margin: 0 auto;
+           margin-top: 20px;
+           width: 1000px;
+          
+       }
+       #head{
+           background-image: url(./images/3.jpg);
+           width: 60px;
+           height:60px;
+       }
+       text{
+           float: left;
+       }
+       #submit{
+           background-color: darkgoldenrod;
+           position: absolute;
+           left:90%;
+           height: 30px;
+           width: 50px;
+       }
+    </style>
+</head>
+<body style='overflow:auto ! important;'>
+    <div id="first">
+        <div><img src="./images/1.jpg"></div>
+        <div>首页</div>
+        <div>榜单</div>
+        <div>歌手</div>
+        <div>下载酷我客户端</div>
+        <div class="pic">美女秀</div>
+        <div class="pic">酷我耳机</div>
+        <div class="pic">VIP会员</div>
+        <div class="pic">听</div>
+        <div>更多服务</div> 
+        <div>登录</div>  
+        <div>^<img src="./images/5.png"></div>
+     </div>
+     <div class="middle"> 
+     <div id="lyric">
+         <div style="font-size: larger; ">喜羊羊<br></div>
+                            专辑：儿童大全 歌手华语群星 <br>
+                            喜羊羊 美羊羊 懒羊羊 沸羊羊<br> 
+                            慢羊羊 软绵绵 红太狼 灰太狼 <br>
+                            别看我只是一只羊 <br>
+                            绿草因为我变得更香 <br>
+                            天空因为我变得更蓝 <br>
+                            白云因为我变得柔软 <br>
+                            <br>
+                            别看我只是一只羊 <br>
+                            羊儿的聪明难以想象 <br>
+                            天再高心情一样奔放 <br>
+                            每天都追赶太阳 <br>
+
+                            有什么难题 去牵绊我 都不会去心伤 <br>
+                            有什么危险 在我面前 也不会去慌乱 <br>
+                            就算有狼群 把我追捕 也当做游戏一场 <br>
+                            <br>
+                            在什么时间 都爱开心 笑容都会飞翔 <br>
+                            就算会摔倒 站了起来 永远不会沮丧 <br>
+                            在所有天气 拥有叫人 大笑的力量 <br>
+     </div>
+     <div class="main">
+        <div id="music_img">
+            <img src="./images/6.jpg" id="rota">
+        </div>
+     <div id="m_btn">
+        <audio autoplay="autoplay" id="mymusic" src="./images/yangyang.mp3" >
+     </div> 
+     <div id="prograssBar"> 
+         <div id="prograssBtn"></div>   
+         <div id="prograsstime"></div>
+    </div>
+    <div id="time"></div>
+    <div id="sound"></div>
+     </div>
+     <div id="updown"><div id="updown2"></div>免费下载这首歌</div>
+     </div>
+     <div id="last">
+        评论 1703条评论
+        <div id="head">
+        </div>
+        <input type="text" style="height:80px;width:700px;" id="txt" >
+        <div id="submit">评论</div>
+     </div>
+     
+</body>
+<script>
+    window.onload = function(){
+   var m_btn =document.getElementById("m_btn");
+   var mymusic =document.getElementById("mymusic");
+   var music_img=document.getElementById('music_img');
+   var prograssBtn =document.getElementById('prograssBtn');
+   var time = document.getElementById('time');
+   var prograsstime=document.getElementById('prograsstime');
+   var sound = document.getElementById('sound');
+   var submit=document.getElementById('submit');
+   var txt=document.getElementById('txt');
+   var n=0;
+   var m=0;
+   mymusic.pause();
+   function time1(){
+    time.innerHTML = parseInt(mymusic.currentTime);
+  }
+    function setProcess(){ 
+        prograsstime.style.width =mymusic.currentTime/mymusic.duration*120+"px";
+    
+ }  
+ setInterval(time1,1000);
+  setInterval(setProcess,1000);
+   m_btn.onclick=function(){
+      if(n%2==0){
+        mymusic.play();
+      m_btn.style.backgroundPosition =-207+"px "+ -47 +"px";
+    }
+    else{
+      mymusic.pause();
+      m_btn.style.backgroundPosition =-162 +"px "+ -88 +"px";
+    }
+    n++;
+  }
+ sound.onclick=function(){
+     if(m%2==1){
+        mymusic.volume =1;
+     }
+     else{
+        mymusic.volume=0;
+     }
+     m++;
+ }
+}
+var date = new Date();
+var now = date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()+"-"+date.getHours()+":"+date.getMinutes();
+submit.onclick=function(){
+    var time =date
+    var keyValue = txt.value;
+    localStorage[time] =  keyValue;
+}
+</script>
+</html>
